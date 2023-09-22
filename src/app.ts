@@ -1,8 +1,7 @@
 import express, { Application, NextFunction, Request, Response } from 'express'
 import cors from 'cors'
 const app: Application = express()
-import globalErrorHandler from './app/middleware/globalErrorHandler'
-import routes from './app/routes'
+// import routes from './app/routes'
 import httpStatus from 'http-status'
 
 app.use(cors())
@@ -11,7 +10,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/api/v1/', routes)
+// app.use('/api/v1/', routes)
 
 // testing
 app.get('/', async (req: Request, res: Response) => {
@@ -19,7 +18,7 @@ app.get('/', async (req: Request, res: Response) => {
 })
 
 // global error handle
-app.use(globalErrorHandler)
+// app.use(globalErrorHandler)
 
 // handle not found
 app.use((req: Request, res: Response, next: NextFunction) => {
@@ -37,5 +36,3 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 })
 
 export default app
-
-// https://github.com/Programming-Hero-Web-Course4/l2a3-cow-hut-backend-assignment-mohammadimrans0

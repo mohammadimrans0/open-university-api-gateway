@@ -1,45 +1,40 @@
-/* eslint-disable no-console */
-import mongoose from 'mongoose'
+import { Server } from 'http'
 import app from './app'
 import config from './config'
-import { Server } from 'http'
-
-let server: Server
-
-process.on('uncaughtException', error => {
-  console.log(error)
-  process.exit(1)
-})
+import { RedisClient } from './shared/redis'
+import { errorlog, logger } from './shared/logger'
 
 async function bootstrap() {
-  try {
-    await mongoose.connect(config.database_url as string)
-    console.log('Database is connected successfully')
+  await RedisClient.connect()
+  const server: Server = app.listen(config.port, () => {
+    logger.info(`Server running on port ${config.port}`)
+  })
 
-    server = app.listen(config.port, () => {
-      console.log(`app is listening on port ${config.port}`)
-    })
-  } catch (error) {
-    console.log('Failed to connect database', error)
-  }
-
-  process.on('unhandledRejection', error => {
-    if (error) {
+  const exitHandler = () => {
+    if (server) {
       server.close(() => {
-        console.log(error)
+        logger.info('Server closed')
         process.exit(1)
       })
     } else {
       process.exit(1)
     }
+  }
+
+  const unexpectedErrorHandler = (error: unknown) => {
+    errorlog.error(error)
+    exitHandler()
+  }
+
+  process.on('uncaughtException', unexpectedErrorHandler)
+  process.on('unhandledRejection', unexpectedErrorHandler)
+
+  process.on('SIGTERM', () => {
+    logger.info('SIGTERM received')
+    if (server) {
+      server.close()
+    }
   })
 }
 
 bootstrap()
-
-process.on('SIGTERM', () => {
-  console.log('SIGTERM is received')
-  if (server) {
-    server.close()
-  }
-})

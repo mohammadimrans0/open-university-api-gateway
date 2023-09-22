@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Projects\\my-projects\\open-university\\project-setup\\logs\\winston\\errors\\.f2021e08cd37c4cff0f761e2fb7cd2afcfe9fc57-audit.json",
+    "files": [
+        {
+            "date": 1695392805282,
+            "name": "C:\\Projects\\my-projects\\open-university\\project-setup\\logs\\winston\\errors\\phu-2023-22-09-20-error.log",
+            "hash": "d2814e3e6782b82074b89aa6d9741d4d5befe9446e884a629d0ad74621232ba5"
+        },
+        {
+            "date": 1695399410729,
+            "name": "C:\\Projects\\my-projects\\open-university\\project-setup\\logs\\winston\\errors\\phu-2023-22-09-22-error.log",
+            "hash": "6e6c08c093450c7a4faad4bf3730f4b17af530e88ecd653ca689a8ea6991ce06"
+        }
+    ],
+    "hashType": "sha256"
+}
