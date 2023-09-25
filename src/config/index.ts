@@ -8,7 +8,7 @@ const envVarsZodSchema = z.object({
   NODE_ENV: z.string(),
   PORT: z
     .string()
-    .default('5000')
+    .default('3030')
     .refine(val => Number(val)),
   JWT_SECRET: z.string(),
   REDIS_URL: z.string(),

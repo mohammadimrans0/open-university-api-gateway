@@ -6,7 +6,7 @@ import { ErrorRequestHandler, NextFunction, Request, Response } from 'express'
 import { ZodError } from 'zod'
 import config from '../../config'
 import handleZodError from '../../errors/handleZodError'
-import ApiError from '../../errors/ApiError'
+import ApiError from '../../errors/apiError'
 
 const globalExceptionHandler: ErrorRequestHandler = (
   error,

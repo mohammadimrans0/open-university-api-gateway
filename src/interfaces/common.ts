@@ -1,16 +1,21 @@
-import { IGenericErrorMessage } from './error'
-
-export type IGenericErrorResponse = {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export interface IGenericResponse {
+  success: boolean
   statusCode: number
   message: string
-  errorMessages: IGenericErrorMessage[]
-}
-
-export type IGenericResponse<T> = {
-  meta: {
+  meta?: {
     page: number
     limit: number
     total: number
   }
-  data: T
+  data?: any
+}
+
+export interface IGenericErrorResponse {
+  statusCode: number
+  message: string
+  errorMessages: {
+    path: string
+    message: string
+  }[]
 }

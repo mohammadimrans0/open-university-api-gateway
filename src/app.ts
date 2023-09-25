@@ -1,8 +1,9 @@
 import express, { Application, NextFunction, Request, Response } from 'express'
 import cors from 'cors'
 const app: Application = express()
-// import routes from './app/routes'
+import routes from './app/routes'
 import httpStatus from 'http-status'
+import globalExceptionHandler from './app/middlewares/globalExceptionHandler'
 
 app.use(cors())
 
@@ -10,15 +11,15 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-// app.use('/api/v1/', routes)
+app.use('/api/v1/', routes)
 
 // testing
 app.get('/', async (req: Request, res: Response) => {
-  res.send('working successfully')
+  res.send('Api Gateway working successfully')
 })
 
 // global error handle
-// app.use(globalErrorHandler)
+app.use(globalExceptionHandler)
 
 // handle not found
 app.use((req: Request, res: Response, next: NextFunction) => {
