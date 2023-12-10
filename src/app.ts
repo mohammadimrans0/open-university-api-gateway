@@ -1,39 +1,34 @@
-import express, { Application, NextFunction, Request, Response } from 'express'
-import cors from 'cors'
-const app: Application = express()
-import routes from './app/routes'
-import httpStatus from 'http-status'
-import globalExceptionHandler from './app/middlewares/globalExceptionHandler'
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
+import express, { Application } from 'express';
+import httpStatus from 'http-status';
+import globalExceptionHandler from './app/middlewares/globalExceptionHandler';
+import routes from './app/routes';
 
-app.use(cors())
+const app: Application = express();
 
-// parser
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
 
-app.use('/api/v1/', routes)
+app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cookieParser());
 
-// testing
-app.get('/', async (req: Request, res: Response) => {
-  res.send('Api Gateway working successfully')
-})
+app.use('/api/v1', routes);
 
-// global error handle
-app.use(globalExceptionHandler)
 
-// handle not found
-app.use((req: Request, res: Response, next: NextFunction) => {
+app.use(globalExceptionHandler);
+
+app.use((req, res, next) => {
   res.status(httpStatus.NOT_FOUND).json({
     success: false,
-    message: 'Data NOt Found',
+    message: 'API not found',
     errorMessages: [
       {
-        path: req.originalUrl,
-        message: 'Invalid Api Request',
-      },
-    ],
-  })
-  next()
-})
+        path: '',
+        message: 'API not found'
+      }
+    ]
+  });
+});
 
-export default app
+export default app;

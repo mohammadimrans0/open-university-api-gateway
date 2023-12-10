@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ExamType } from '../../../enums/student-enrolled-course-mark';
+import { ExamType } from '../../../enums/student-enrolled-course-marks';
 
 const updateStudentMarks = z.object({
   body: z.object({

@@ -6,44 +6,64 @@
     "auditLog": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\.5fb1737e5cd1c57e3355930f9a2063b909481a8a-audit.json",
     "files": [
         {
-            "date": 1695450969372,
-            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-23-09-12-success.log",
-            "hash": "f385eeddc6b140aeffa954da10cee2fe6ec16be9d18c87dd8986c19701ef433c"
+            "date": 1700344097390,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-19-11-03-success.log",
+            "hash": "6355341f77eb16306197679f9863bc2b2cc62f60824311131ab1ae29eaf7a185"
         },
         {
-            "date": 1695457267769,
-            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-23-09-14-success.log",
-            "hash": "e6c924ee33f71ca3bd4f69fe3882bd5246834baa264104d271056879e843619f"
+            "date": 1700576391111,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-21-11-20-success.log",
+            "hash": "0847474a3e2a29fe112100d3da5b161b6569232a8f3824d4ac82798ccb0b1dec"
         },
         {
-            "date": 1695471561537,
-            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-23-09-18-success.log",
-            "hash": "fa22e30c37d85284ba5d24946910182b760433af539c6d23678164bfdeb75c62"
+            "date": 1700580649151,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-21-11-21-success.log",
+            "hash": "dde0ce13bedb82c6d5ea79a2ea2612d1227f89418af6fac1bdb3ab031560f9d1"
         },
         {
-            "date": 1695474130392,
-            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-23-09-19-success.log",
-            "hash": "b9dd11655130df0180af4773193af4d04e353610885bc0a90aaf0278009baf01"
+            "date": 1700745004347,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-23-11-19-success.log",
+            "hash": "6ecc0c4130f2066bcbaac3381ac04c1c843604f4ad46e63808a462a2e2758c2f"
         },
         {
-            "date": 1695478473425,
-            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-23-09-20-success.log",
-            "hash": "ee346ecfa82ea80f04316223db4ecf77dd70b174bde31903f6f284c40854a872"
+            "date": 1700917715984,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-25-11-19-success.log",
+            "hash": "7b5cd0ae4a97af0eb03e4607bc51dae49c2521c5d4f2794b940f2038b7d2120d"
         },
         {
-            "date": 1695567961230,
-            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-24-09-21-success.log",
-            "hash": "d5812a4b41a3216dfe6e1c7b7ee367388c5b0301dcd5cfff361fa483cfdc00c3"
+            "date": 1700921090385,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-25-11-20-success.log",
+            "hash": "db25fc808af5e8af01db863f553ca4dbd390386f0681287b8e124dbb321411f0"
         },
         {
-            "date": 1695572356530,
-            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-24-09-22-success.log",
-            "hash": "46c7d61c72b4abdf602f1c223f5f73515dbafc1d98f656a5b87c34a96f1db380"
+            "date": 1700977927980,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-26-11-11-success.log",
+            "hash": "405ee397e5f7babb26256053df99b27ba860ac7b6d766efabf032caf11fd2bfa"
         },
         {
-            "date": 1695647006438,
-            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-25-09-19-success.log",
-            "hash": "4c3764a70ac99f2486ed4af3235f6e8d5998e60f4acf81bebba7486f969a4f99"
+            "date": 1700989523725,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-26-11-15-success.log",
+            "hash": "f9c6f70477a13dae90c6f5787c025c1fd65fd3089525a8d4b6753a20c60b8a2b"
+        },
+        {
+            "date": 1700993915171,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-26-11-16-success.log",
+            "hash": "fb7ea0eb3aed878932632b109fb437fd737d3748b6a6d253451d5556f58b7e61"
+        },
+        {
+            "date": 1701000614103,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-26-11-18-success.log",
+            "hash": "5fc45061f0771b4f754a9f5ad4a829a18d785f02ea641e59432bb587d605472f"
+        },
+        {
+            "date": 1701003931052,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-26-11-19-success.log",
+            "hash": "38516766daf105a7185c0e451f3b084442360cd5fa49525fe2bc34ba0b097bd8"
+        },
+        {
+            "date": 1701094221688,
+            "name": "C:\\Projects\\my-projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-27-11-20-success.log",
+            "hash": "a017b117c40ad6946d86bb10e709170c37e361c700331f26c493995b76329ee3"
         }
     ],
     "hashType": "sha256"

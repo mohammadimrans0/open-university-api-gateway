@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Projects\\open-university\\open-university-api-gateway\\logs\\winston\\errors\\.5e1b04cbb5d378c01342b648635f1cb0a8fa0187-audit.json",
+    "files": [
+        {
+            "date": 1699544252096,
+            "name": "C:\\Projects\\open-university\\open-university-api-gateway\\logs\\winston\\errors\\phu-2023-09-11-21-error.log",
+            "hash": "b6697c831807703f1966887a48a168dc1a687c97de88905ab7ffc37ab6584f70"
+        },
+        {
+            "date": 1699546250787,
+            "name": "C:\\Projects\\open-university\\open-university-api-gateway\\logs\\winston\\errors\\phu-2023-09-11-22-error.log",
+            "hash": "e672ff36cd7d5446c55a6be72b005fa776e8c1404e63868da6aed8fc271eb5a7"
+        }
+    ],
+    "hashType": "sha256"
+}

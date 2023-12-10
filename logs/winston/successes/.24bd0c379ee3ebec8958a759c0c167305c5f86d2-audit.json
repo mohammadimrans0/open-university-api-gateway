@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Projects\\open-university\\api-gateway\\logs\\winston\\successes\\.24bd0c379ee3ebec8958a759c0c167305c5f86d2-audit.json",
+    "files": [
+        {
+            "date": 1699769696599,
+            "name": "C:\\Projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-12-11-12-success.log",
+            "hash": "fdba0079e15282f53bcdb9cd84cd4724d73448a8bcf5077900103840b281cafe"
+        },
+        {
+            "date": 1699774006612,
+            "name": "C:\\Projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-12-11-13-success.log",
+            "hash": "ead15352fa69e633bd1c06f70cc615666bf1f4680caf155253f6c969c693d2c9"
+        },
+        {
+            "date": 1699776253410,
+            "name": "C:\\Projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-12-11-14-success.log",
+            "hash": "74ef0727e6615ad94bf1c1b40bef11c7b4bb8301a9e88e5e657458e03d0f9596"
+        },
+        {
+            "date": 1699795191178,
+            "name": "C:\\Projects\\open-university\\api-gateway\\logs\\winston\\successes\\phu-2023-12-11-19-success.log",
+            "hash": "ac116ca8b227cc1724b0c393c1868b787a4f2f75acb4455bca7a1743476bd3c0"
+        }
+    ],
+    "hashType": "sha256"
+}

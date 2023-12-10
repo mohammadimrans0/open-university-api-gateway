@@ -1,59 +1,25 @@
-/* eslint-disable no-undef */
-import path from 'path'
-import { createLogger, format, transports } from 'winston'
-import DailyRotateFile from 'winston-daily-rotate-file'
-const { combine, timestamp, label, printf } = format
+import path from 'path';
+import winston from 'winston';
+import DailyRotateFile from 'winston-daily-rotate-file';
 
-//Custom Log Format
-
-const myFormat = printf(({ level, message, label, timestamp }) => {
-  const date = new Date(timestamp)
-  const hour = date.getHours()
-  const minutes = date.getMinutes()
-  const seconds = date.getSeconds()
-  return `${date.toDateString()} ${hour}:${minutes}:${seconds} } [${label}] ${level}: ${message}`
-})
-
-const logger = createLogger({
+const logger = winston.createLogger({
   level: 'info',
-  format: combine(label({ label: 'OUAG' }), timestamp(), myFormat),
+  format: winston.format.combine(winston.format.timestamp(), winston.format.json()),
   transports: [
-    new transports.Console(),
     new DailyRotateFile({
-      filename: path.join(
-        process.cwd(),
-        'logs',
-        'winston',
-        'successes',
-        'phu-%DATE%-success.log'
-      ),
-      datePattern: 'YYYY-DD-MM-HH',
-      zippedArchive: true,
-      maxSize: '20m',
-      maxFiles: '14d',
+      filename: path.join(process.cwd(), 'logs', 'winston', 'success', 'success-%DATE%.log'),
+      datePattern: 'YYYY-MM-DD',
+      level: 'info'
     }),
-  ],
-})
-
-const errorlog = createLogger({
-  level: 'error',
-  format: combine(label({ label: 'OUAG' }), timestamp(), myFormat),
-  transports: [
-    new transports.Console(),
     new DailyRotateFile({
-      filename: path.join(
-        process.cwd(),
-        'logs',
-        'winston',
-        'errors',
-        'phu-%DATE%-error.log'
-      ),
-      datePattern: 'YYYY-DD-MM-HH',
-      zippedArchive: true,
-      maxSize: '20m',
-      maxFiles: '14d',
+      filename: path.join(process.cwd(), 'logs', 'winston', 'error', 'error-%DATE%.log'),
+      datePattern: 'YYYY-MM-DD',
+      level: 'error'
     }),
-  ],
-})
+    new winston.transports.Console({
+      stderrLevels: ['error']
+    })
+  ]
+});
 
-export { logger, errorlog }
+export default logger;

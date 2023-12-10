@@ -15,11 +15,11 @@ const loginUser = async (req: Request, res: Response, next: NextFunction) => {
             httpOnly: true,
         };
 
-        res.cookie('refreshToken', refreshToken, cookieOptions);
+        res.cookie('refreshToken', result.data.refreshToken, cookieOptions);
         sendResponse(res, {
             statusCode: httpStatus.OK,
             success: true,
-            message: "User logged in!",
+            message: "User loged in!",
             data: others
         });
     }
@@ -27,7 +27,6 @@ const loginUser = async (req: Request, res: Response, next: NextFunction) => {
         next(error);
     }
 };
-
 const refreshToken = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const result = await AuthenticationService.refreshToken(req);
@@ -39,7 +38,7 @@ const refreshToken = async (req: Request, res: Response, next: NextFunction) => 
             httpOnly: true,
         };
 
-        res.cookie('refreshToken', refreshToken, cookieOptions);
+        res.cookie('refreshToken', result.data.refreshToken, cookieOptions);
         sendResponse(res, {
             statusCode: httpStatus.OK,
             success: true,
@@ -60,10 +59,29 @@ const changePassword = async (req: Request, res: Response, next: NextFunction) =
         next(error);
     }
 }
+const forgotPassword = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const result = await AuthenticationService.forgotPassword(req);
+        sendResponse(res, result)
+    } catch (error) {
+        next(error);
+    }
+}
+
+const resetPassword = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const result = await AuthenticationService.resetPassword(req);
+        sendResponse(res, result)
+    } catch (error) {
+        next(error);
+    }
+}
 
 
 export const AuthenticationController = {
     loginUser,
     refreshToken,
-    changePassword
+    changePassword,
+    forgotPassword,
+    resetPassword
 }
