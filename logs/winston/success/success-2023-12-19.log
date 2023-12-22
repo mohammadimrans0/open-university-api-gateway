@@ -1,0 +1,6 @@
+{"level":"info","message":"Redis connected","timestamp":"2023-12-19T14:24:56.942Z"}
+{"level":"info","message":"Server running on port 3030","timestamp":"2023-12-19T14:24:56.949Z"}
+{"level":"error","statusCode":401,"timestamp":"2023-12-19T14:25:54.725Z"}
+{"level":"info","message":"Server closed","timestamp":"2023-12-19T14:26:54.725Z"}
+{"level":"info","message":"Redis connected","timestamp":"2023-12-19T14:28:12.215Z"}
+{"level":"info","message":"Server running on port 3030","timestamp":"2023-12-19T14:28:12.222Z"}

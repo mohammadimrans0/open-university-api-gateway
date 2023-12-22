@@ -42,7 +42,6 @@ const completePayment = async (req: Request): Promise<IGenericResponse> => {
 };
 
 
-
 export const StudentSemesterPaymentService = {
   getMyPayment,
   initiatePayment,

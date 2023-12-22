@@ -8,18 +8,18 @@ const loginUser = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const result = await AuthenticationService.loginUser(req);
 
-        const { refreshToken, ...others } = result.data;
+        const { ...others } = result.data;
 
         const cookieOptions = {
             secure: config.env === 'production',
             httpOnly: true,
         };
 
-        res.cookie('refreshToken', result.data.refreshToken, cookieOptions);
+        res.cookie('refreshToken', result?.data?.refreshToken, cookieOptions);
         sendResponse(res, {
             statusCode: httpStatus.OK,
             success: true,
-            message: "User loged in!",
+            message: "User logged in!",
             data: others
         });
     }
@@ -31,14 +31,14 @@ const refreshToken = async (req: Request, res: Response, next: NextFunction) => 
     try {
         const result = await AuthenticationService.refreshToken(req);
 
-        const { refreshToken, ...others } = result.data;
+        const { ...others } = result.data;
 
         const cookieOptions = {
             secure: config.env === 'production',
             httpOnly: true,
         };
 
-        res.cookie('refreshToken', result.data.refreshToken, cookieOptions);
+        res.cookie('refreshToken', result?.data?.refreshToken, cookieOptions);
         sendResponse(res, {
             statusCode: httpStatus.OK,
             success: true,
@@ -59,6 +59,7 @@ const changePassword = async (req: Request, res: Response, next: NextFunction) =
         next(error);
     }
 }
+
 const forgotPassword = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const result = await AuthenticationService.forgotPassword(req);

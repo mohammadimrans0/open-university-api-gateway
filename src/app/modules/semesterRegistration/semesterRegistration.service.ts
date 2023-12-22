@@ -86,7 +86,7 @@ const startRegistration = async (req: Request): Promise<IGenericResponse> => {
 
 const mySemesterRegistrationCourses = async (req: Request): Promise<IGenericResponse> => {
   const response: IGenericResponse = await CoreService.get(
-    `/semester-registrations/get-my-semsester-courses`,
+    `/semester-registrations/get-my-semester-courses`,
     {
       headers: {
         Authorization: req.headers.authorization
